@@ -1,20 +1,39 @@
 /* components/Table.module.css */
 .table {
-    width: 100%;
+    width: 80%;
+    margin: auto;
     border-collapse: collapse;
 }
 
 .cell {
-    border: 1px solid #000;
-    padding: 8px;
+    border: 1px solid #ddd;
+    padding: 12px;
     text-align: center;
+    position: relative;
 }
 
 .input {
-    width: 80%;
-    padding: 4px;
+    width: 50%;
+    padding: 8px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: inline-block;
+    margin-right: 10px; /* Added padding between course name and credit input boxes */
 }
 
-.button {
-    margin-top: 4px;
+.creditInput {
+    width: 30%;
+    padding: 8px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.header {
+    background-color: #f2f2f2;
+    font-weight: bold;
 }
