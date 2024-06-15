@@ -1,0 +1,20 @@
+/* components/Table.module.css */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cell {
+    border: 1px solid #000;
+    padding: 8px;
+    text-align: center;
+}
+
+.input {
+    width: 80%;
+    padding: 4px;
+}
+
+.button {
+    margin-top: 4px;
+}
