@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div>
       <h1>Terrapin One</h1>
-      <p>by TerrapinDev</p>
+      <br></br>
       <CourseTable />
     </div>
   );
