@@ -1,6 +1,7 @@
+// components/CourseTable.tsx
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import styles from './Table.module.css';
 
 const CourseTable: React.FC = () => {
@@ -27,28 +28,6 @@ const CourseTable: React.FC = () => {
         // Placeholder for LLM chat response
         setChatResponse(`Response to: ${prompt}`);
     };
-
-    useEffect(() => {
-        const handleScroll = () => {
-            const footer = document.getElementById('footer');
-            if (footer) {
-                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-                const windowHeight = window.innerHeight;
-                const documentHeight = document.documentElement.offsetHeight;
-                if (windowHeight + scrollTop >= documentHeight) {
-                    footer.classList.remove(styles.fixedFooter);
-                } else {
-                    footer.classList.add(styles.fixedFooter);
-                }
-            }
-        };
-
-        window.addEventListener('scroll', handleScroll);
-
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
 
     return (
         <div>
@@ -114,7 +93,7 @@ const CourseTable: React.FC = () => {
                     ))}
                 </tbody>
             </table>
-            <footer id="footer" className={styles.footer}>
+            <footer className={styles.footer}>
                 <div className={styles.footerContent}>
                     <div className={styles.requirementsCheck}>
                         <input
